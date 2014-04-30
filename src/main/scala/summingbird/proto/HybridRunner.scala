@@ -27,39 +27,44 @@ object HybridRunner {
     * online store.
     */
   val store = ClientStore(
-    ScaldingRunner.servingStore,
+    //ScaldingRunner.servingStore,
     StormRunner.viewCountStore,
     5
   )
 
-  def lookup(lookId: Long): Option[Long] =
+//  def lookup(lookId: Long): Option[Long] =
+//    Await.result {
+//      store.get(lookId)
+//    }
+
+  def lookup(lookup:String): Option[Long] =
     Await.result {
-      store.get(lookId)
+      store.get(lookup)
     }
 
-  def lookupDebug(lookId: Long): Unit = {
-    val offline = ScaldingRunner.lookup(lookId)
-    logger.info("Offline: %s".format(offline))
+//  def lookupDebug(lookId: Long): Unit = {
+//    val offline = ScaldingRunner.lookup(lookId)
+//    logger.info("Offline: %s".format(offline))
+//
+//    Stream.iterate(offline.map(_._1).getOrElse(batcher.currentBatch))(_ + 1)
+//      .takeWhile(_ <= batcher.currentBatch).foreach { batch =>
+//      val online = Await.result {
+//        StormRunner.viewCountStore.get(lookId -> batch)
+//      }
+//      logger.info("Online: %s".format((batch,online)))
+//    }
+//
+//    val hybrid = lookup(lookId)
+//
+//    logger.info("Hybrid: %s".format(hybrid))
+//
+//  }
 
-    Stream.iterate(offline.map(_._1).getOrElse(batcher.currentBatch))(_ + 1)
-      .takeWhile(_ <= batcher.currentBatch).foreach { batch =>
-      val online = Await.result {
-        StormRunner.viewCountStore.get(lookId -> batch)
-      }
-      logger.info("Online: %s".format((batch,online)))
-    }
-
-    val hybrid = lookup(lookId)
-
-    logger.info("Hybrid: %s".format(hybrid))
-
-  }
-
-  def lookupAll() = {
-    store.multiGet((0L to (MaxId - 1)).toSet).map { case (k,v) =>
-      logger.info(k + " : " + Await.result(v))
-    }
-  }
+//  def lookupAll() = {
+//    store.multiGet((0L to (MaxId - 1)).toSet).map { case (k,v) =>
+//      logger.info(k + " : " + Await.result(v))
+//    }
+//  }
 }
 
 
@@ -117,15 +122,12 @@ object RunHybrid extends App {
     new Runnable {
       def run = { try {
         logger.info("Sanity Check")
-        logger.info("lookupDebug(7)")
-        HybridRunner.lookupDebug(7)
-
+        //loggerinfo("lookupDebug(7)")
+        //HybridRunner.lookupDebug(7)
         logger.info("Events Ingested: " + Ingestion.ingested)
-
         val ids = 0L to (MaxId - 1)
-        logger.info("Events Counted (offline): " + ScaldingRunner.servingStore.multiGet(ids.toSet).map(kv => Await.result(kv._2).map(_._2).getOrElse(0L)).sum)
-        logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
-        logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+        //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+        //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
       }
       catch {
         case e: Throwable => logger.error("sanity check failure", e)
@@ -137,3 +139,4 @@ object RunHybrid extends App {
 }
 
 //        logger.info("Events Produced: " + DummyClickstream.produced)
+//        logger.info("Events Counted (offline): " + ScaldingRunner.servingStore.multiGet(ids.toSet).map(kv => Await.result(kv._2).map(_._2).getOrElse(0L)).sum)

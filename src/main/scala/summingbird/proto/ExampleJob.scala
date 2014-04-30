@@ -33,9 +33,9 @@ object ViewCount {
     */
   def viewCount[P <: Platform[P]](
     source: Producer[P, ProductViewed],
-    store: P#Store[ProductViewed, Long]) =
+    store: P#Store[String, Long]) =
     source
       //.flatMap { event: ProductViewed => Seq((event.productId -> 1L)) }
-      .flatMap { event: ProductViewed => Seq(event -> 1L) }
+      .flatMap {event: ProductViewed => Seq((event.userGuid -> 1L))}
       .sumByKey(store)
 }
