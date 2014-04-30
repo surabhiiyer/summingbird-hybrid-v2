@@ -24,25 +24,34 @@ package object proto {
     DataDir + "productview_0_" + DataFileDateFormat.format(batcher.earliestTimeOf(batch.next).toDate)
   }
 
-  def randomView(date: Date = new Date()) = {
-    ProductViewed(
-      random.nextLong.abs % MaxId,
-      date,
-      java.util.UUID.randomUUID.toString
-    )
-  }
+//  def randomView(date: Date = new Date()) = {
+//    ProductViewed(
+//      random.nextLong.abs % MaxId,
+//      date,
+//      java.util.UUID.randomUUID.toString
+//    )
+//  }
 
   def parseView(bytes: Array[Byte]): ProductViewed = {
     parseView(new String(bytes))
   }
 
+//  def parseView(s: String): ProductViewed = {
+//    val bits = s.split("\t")
+//    ProductViewed(bits(0).toLong, new Date(bits(1).toLong), bits(2))
+//  }
+
+
   def parseView(s: String): ProductViewed = {
     val bits = s.split("\t")
-    ProductViewed(bits(0).toLong, new Date(bits(1).toLong), bits(2))
+    ProductViewed(bits(0))
   }
+
+//  def serializeView(pdpView: ProductViewed): String = {
+//    "%s\t%s\t%s".format(pdpView.productId, pdpView.requestTime.getTime, pdpView.userGuid)
+//  }
 
   def serializeView(pdpView: ProductViewed): String = {
-    "%s\t%s\t%s".format(pdpView.productId, pdpView.requestTime.getTime, pdpView.userGuid)
+    "%s\t%s\t%s".format(pdpView.userGuid)
   }
-
 }
