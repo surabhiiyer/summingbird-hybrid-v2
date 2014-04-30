@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e2a8a2-9082-4017-8361-a817e3bf579a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyBatchData.scala" afterPath="$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyBatchData.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyClickstream.scala" afterPath="$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyClickstream.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala" afterPath="$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" afterPath="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="summingbird-proto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,6 +76,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="HybridRunner.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="7" selection-start="292" selection-end="292" vertical-scroll-proportion="-4.450704" vertical-offset="1715" max-vertical-offset="2070">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UUID.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/UUID.class">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,19 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StormRunner.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="8" selection-start="4259" selection-end="4259" vertical-scroll-proportion="0.0" vertical-offset="895" max-vertical-offset="1860">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemcacheStore.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MemcacheStore.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/storehaus-memcache_2.10/srcs/storehaus-memcache_2.10-0.9.0-sources.jar!/com/twitter/storehaus/memcache/MemcacheStore.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="6" selection-start="3338" selection-end="3338" vertical-scroll-proportion="0.33333334" vertical-offset="860" max-vertical-offset="1665">
+            <state line="97" column="6" selection-start="3338" selection-end="3338" vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="1665">
               <folding />
             </state>
           </provider>
@@ -174,10 +173,11 @@
         <option value="$PROJECT_DIR$/project/build.properties" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/ExampleJob.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/package.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyBatchData.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyClickstream.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/summingbird/proto/package.scala" />
       </list>
     </option>
   </component>
@@ -780,7 +780,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3252818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -793,7 +793,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1139,29 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.6052632" vertical-offset="90" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/Ingestion.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="46" selection-start="1799" selection-end="1812" vertical-scroll-proportion="1.6696589" vertical-offset="0" max-vertical-offset="1455">
-          <folding>
-            <element signature="e#27#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="7" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0" vertical-offset="943" max-vertical-offset="2055">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyBatchData.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="0" selection-end="795" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
@@ -1192,7 +1169,28 @@
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/storehaus-memcache_2.10/srcs/storehaus-memcache_2.10-0.9.0-sources.jar!/com/twitter/storehaus/memcache/MemcacheStore.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="6" selection-start="3338" selection-end="3338" vertical-scroll-proportion="0.33333334" vertical-offset="860" max-vertical-offset="1665">
+        <state line="97" column="6" selection-start="3338" selection-end="3338" vertical-scroll-proportion="0.0" vertical-offset="860" max-vertical-offset="1665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="26" selection-start="1342" selection-end="1342" vertical-scroll-proportion="1.2038044" vertical-offset="187" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/Ingestion.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="49" selection-start="202" selection-end="202" vertical-scroll-proportion="-1.2340425" vertical-offset="526" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="7" selection-start="292" selection-end="292" vertical-scroll-proportion="-4.450704" vertical-offset="1715" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>

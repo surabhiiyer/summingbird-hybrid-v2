@@ -102,14 +102,14 @@ object RunHybrid extends App {
 //  })
 
   // Run the batch job after each log file is available
-  executor.submit(new Runnable {
-    def run = {
-      while (true) {
-        barrier.await()
-        try { ScaldingRunner.runOnce } catch { case e: Throwable => logger.error("batch failure", e) }
-      }
-    }
-  })
+//  executor.submit(new Runnable {
+//    def run = {
+//      while (true) {
+//        barrier.await()
+//        try { ScaldingRunner.runOnce } catch { case e: Throwable => logger.error("batch failure", e) }
+//      }
+//    }
+//  })
 
 
   // run sanity checks
@@ -120,7 +120,6 @@ object RunHybrid extends App {
         logger.info("lookupDebug(7)")
         HybridRunner.lookupDebug(7)
 
-        logger.info("Events Produced: " + DummyClickstream.produced)
         logger.info("Events Ingested: " + Ingestion.ingested)
 
         val ids = 0L to (MaxId - 1)
@@ -136,3 +135,5 @@ object RunHybrid extends App {
   )
 
 }
+
+//        logger.info("Events Produced: " + DummyClickstream.produced)
