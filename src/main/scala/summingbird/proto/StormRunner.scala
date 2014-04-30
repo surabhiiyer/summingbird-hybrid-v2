@@ -79,13 +79,13 @@ object StormRunner {
     * First, the backing store:
     */
   lazy val viewCountStore =
-    MemcacheStore.mergeable[(Long, BatchID), Long](MemcacheStore.defaultClient("memcached", "localhost:11211"), "stormLookCount")
+    MemcacheStore.mergeable[(ProductViewed,BatchID), Long](MemcacheStore.defaultClient("memcached", "localhost:11211"), "stormLookCount")
 
   /**
     * the param to store is by name, so this is still not created created
     * yet
     */
-  val storeSupplier: StormStore[Long, Long] = Storm.store(viewCountStore)
+  val storeSupplier: StormStore[ProductViewed, Long] = Storm.store(viewCountStore)
 
   /**
     * This function will be called by the storm runner to request the info
