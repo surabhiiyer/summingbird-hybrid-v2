@@ -36,16 +36,16 @@ package object proto {
     parseView(new String(bytes))
   }
 
-//  def parseView(s: String): ProductViewed = {
-//    val bits = s.split("\t")
-//    ProductViewed(bits(0).toLong, new Date(bits(1).toLong), bits(2))
-//  }
-
-
   def parseView(s: String): ProductViewed = {
     val bits = s.split("\t")
     ProductViewed(bits(0))
   }
+
+
+//  def parseView(s: String): ProductViewed = {
+//    val bits = s.split("\t")
+//    ProductViewed(bits(0))
+//  }
 
 //  def serializeView(pdpView: ProductViewed): String = {
 //    "%s\t%s\t%s".format(pdpView.productId, pdpView.requestTime.getTime, pdpView.userGuid)
