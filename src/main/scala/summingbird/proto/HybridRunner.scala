@@ -116,6 +116,7 @@ object RunHybrid extends App {
 //    }
 //  })
   // run sanity checks
+
   executor.scheduleAtFixedRate(
     new Runnable {
       def run = { try {
@@ -125,7 +126,7 @@ object RunHybrid extends App {
         logger.info("Events Ingested: " + Ingestion.ingested)
         // = 0L to (MaxId - 1)
         val ids :String = ""
-        //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+        logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
         //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
       }
       catch {
