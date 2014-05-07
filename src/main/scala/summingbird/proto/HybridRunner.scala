@@ -124,9 +124,13 @@ object RunHybrid extends App {
         //loggerinfo("lookupDebug(7)")
         //HybridRunner.lookupDebug(7)
         logger.info("Events Ingested: " + Ingestion.ingested)
-        // = 0L to (MaxId - 1)
-        val ids :String = ""
-        logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+        val ids = 0L to (MaxId - 1)
+        //val ids :String = ""
+        var a: Int  = StormRunner.lookup();
+        //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+       //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse("")).sum)
+        logger.info("Events Counted (online): " + a)
+
         //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
       }
       catch {

@@ -40,6 +40,8 @@ object ExeStorm {
   * cluster.
   */
 object StormRunner {
+
+
   /**
     * These imports bring the requisite serialization injections, the
     * time extractor and the batcher into implicit scope. This is
@@ -133,9 +135,29 @@ object StormRunner {
     res8: Option[Long] = Some(1779)
     }}}
     */
+//
+//  def lookup(lookId: String): Option[Long] =
+//    Await.result {
+//    var a: Int = 0;
+//    for(value:String <-  viewCountStore.get(lookId -> ViewCount.batcher.currentBatch) )
+//    {
+//      a = a+1 ;
+//    //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
+//    }
+//    }
 
-  def lookup(lookId: String): Option[Long] =
+  val lookId: String =  "" ;
+
+  def lookup(): Int =
+  {
+    var a: Int = 0;
     Await.result {
-      viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
+      for(value: Option[Long] <-  viewCountStore.get(lookId -> ViewCount.batcher.currentBatch) )
+      {
+        a = a+1 ;
+        //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
+      }
     }
+  return a ;
+}
 }
