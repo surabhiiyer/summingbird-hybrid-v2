@@ -26,6 +26,7 @@ import com.twitter.scalding.Args
 import com.twitter.storehaus.memcache.MemcacheStore
 import com.twitter.tormenta.spout.KafkaSpout
 import com.twitter.util.Await
+import org.slf4j.LoggerFactory
 
 
 object ExeStorm {
@@ -40,7 +41,7 @@ object ExeStorm {
   * cluster.
   */
 object StormRunner {
-
+  private val logger = LoggerFactory.getLogger(this.getClass)
 
   /**
     * These imports bring the requisite serialization injections, the
@@ -156,6 +157,7 @@ object StormRunner {
       for(value: Option[Long] <-  viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch) )
       {
         a = a+1 ;
+        logger.info("###A### " + a);
         //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
       }
     }
