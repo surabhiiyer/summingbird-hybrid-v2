@@ -4,6 +4,7 @@ import com.twitter.summingbird.store.ClientStore
 import com.twitter.util.Await
 
 import org.slf4j.LoggerFactory
+import com.twitter.summingbird.batch.BatchID
 
 /**
   * The following object contains code to execute the Summingbird
@@ -12,7 +13,6 @@ import org.slf4j.LoggerFactory
   */
 object HybridRunner {
   @transient private val logger = LoggerFactory.getLogger(this.getClass)
-
   /**
     * These imports bring the requisite serialization injections, the
     * time extractor and the batcher into implicit scope. This is
@@ -37,9 +37,15 @@ object HybridRunner {
 //      store.get(lookId)
 //    }
 
-  def lookup(lookup:String): Option[Long] =
+
+//  def lookup(lookup:String): Option[Long] =
+//    Await.result {
+//      store.get(lookup)
+//    }
+
+  def lookup(pdpView:ProductViewed): Option[Long] =
     Await.result {
-      store.get(lookup)
+      store.get(pdpView.userGuid)
     }
 
 //  def lookupDebug(lookId: Long): Unit = {
@@ -124,14 +130,17 @@ object RunHybrid extends App {
         //loggerinfo("lookupDebug(7)")
         //HybridRunner.lookupDebug(7)
         logger.info("Events Ingested: " + Ingestion.ingested)
-        val ids = 0L to (MaxId - 1)
-        //val ids :String = ""
-        var a: Int  = StormRunner.lookup();
-        //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(ids.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
-       //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse("")).sum)
-        logger.info("Events Counted (online): " + a)
-
-        //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+        val a: String  = "";
+        val pdpView = new ProductViewed(a);
+       // val ids = 0L to (MaxId - 1)
+       //var a = lookup() ;
+      //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(userGuid.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+      //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse("")).sum)
+      //logger.info("Events Counted (online): " + a)
+     // val userGuid = ProductViewed.userGuid;
+     // logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(userGuid.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum);
+        logger.info("Events Counted (online): " + StormRunner.lookup(pdpView));
+      //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
       }
       catch {
         case e: Throwable => logger.error("sanity check failure", e)

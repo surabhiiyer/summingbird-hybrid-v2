@@ -146,13 +146,14 @@ object StormRunner {
 //    }
 //    }
 
-  val lookId: String =  "" ;
 
-  def lookup(): Int =
+  def lookup(pdpView: ProductViewed): Int =
   {
+
+   // var lookId : String =
     var a: Int = 0;
     Await.result {
-      for(value: Option[Long] <-  viewCountStore.get(lookId -> ViewCount.batcher.currentBatch) )
+      for(value: Option[Long] <-  viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch) )
       {
         a = a+1 ;
         //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
