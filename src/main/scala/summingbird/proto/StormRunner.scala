@@ -158,6 +158,8 @@ object StormRunner {
       {
         a = a+1 ;
         logger.info("###A### " + a);
+        logger.info("###MSG### " + viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch));
+
         //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
       }
     }
