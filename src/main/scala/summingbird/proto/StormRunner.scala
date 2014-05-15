@@ -148,21 +148,23 @@ object StormRunner {
 //    }
 
 
-  def lookup(pdpView: ProductViewed): Int =
-  {
-
-   // var lookId : String =
-    var a: Int = 0;
-    Await.result {
-      for(value: Option[Long] <-  viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch) )
-      {
-        a = a+1 ;
-        logger.info("###A### " + a);
-        logger.info("###MSG### " + viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch));
-
-        //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
-      }
-    }
-  return a ;
-}
+//  def lookup(pdpView: ProductViewed): Int =
+//  {
+//
+//   // var lookId : String =
+//    var a: Int = 0;
+//    Await.result {
+//      for(value: String <-  viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch) )
+//      {
+//        a = a+1 ;
+//        logger.info("###A### " + a);
+//       // logger.info("###MSG### " + viewCountStore.get(pdpView.userGuid -> ViewCount.batcher.currentBatch));
+//        logger.info("###MSG### " + value);
+//
+//
+//        //viewCountStore.get(lookId -> ViewCount.batcher.currentBatch)
+//      }
+//    }
+//  return a ;
+//}
 }

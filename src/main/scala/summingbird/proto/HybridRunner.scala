@@ -43,12 +43,22 @@ object HybridRunner {
 //      store.get(lookup)
 //    }
 
+//  def lookup(pdpView:ProductViewed): Option[Long] =
+//    Await.result {
+//      store.get(pdpView.userGuid)
+//    }
+
   def lookup(pdpView:ProductViewed): Option[Long] =
     Await.result {
-      store.get(pdpView.userGuid)
+      for(value: String <- store.get(pdpView.userGuid) )
+      {
+
+      }
     }
 
-//  def lookupDebug(lookId: Long): Unit = {
+
+
+  //  def lookupDebug(lookId: Long): Unit = {
 //    val offline = ScaldingRunner.lookup(lookId)
 //    logger.info("Offline: %s".format(offline))
 //
@@ -139,7 +149,7 @@ object RunHybrid extends App {
       //logger.info("Events Counted (online): " + a)
      // val userGuid = ProductViewed.userGuid;
      // logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(userGuid.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum);
-        logger.info("Events Counted (online): " + StormRunner.lookup(pdpView));
+        logger.info("Events Counted (online): " + HybridRunner.lookup(pdpView));
       //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
       }
       catch {
