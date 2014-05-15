@@ -50,10 +50,7 @@ object HybridRunner {
 
   def lookup(pdpView:ProductViewed): Option[Long] =
     Await.result {
-      for(value: String <- store.get(pdpView.userGuid) )
-      {
-
-      }
+      store.get(pdpView.userGuid)
     }
 
 
