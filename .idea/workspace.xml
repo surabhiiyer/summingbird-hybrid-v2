@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b9e2a8a2-9082-4017-8361-a817e3bf579a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" afterPath="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="summingbird-proto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,10 +70,8 @@
       <file leaf-file-name="StormRunner.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="10" selection-start="5377" selection-end="5480" vertical-scroll-proportion="-22.038462" vertical-offset="1557" max-vertical-offset="2430">
-              <folding>
-                <element signature="e#595#639#0" expanded="true" />
-              </folding>
+            <state line="156" column="10" selection-start="5377" selection-end="5480" vertical-scroll-proportion="0.0" vertical-offset="2340" max-vertical-offset="2640">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,7 +79,7 @@
       <file leaf-file-name="Ingestion.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/Ingestion.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="766" max-vertical-offset="1365">
+            <state line="31" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
@@ -89,10 +88,26 @@
       <file leaf-file-name="HybridRunner.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="33" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.5041322" vertical-offset="597" max-vertical-offset="2460">
-              <folding>
-                <element signature="e#27#75#0" expanded="true" />
-              </folding>
+            <state line="31" column="5" selection-start="968" selection-end="968" vertical-scroll-proportion="-3.2914286" vertical-offset="1557" max-vertical-offset="2505">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientStore.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/summingbird-client_2.10/srcs/summingbird-client_2.10-0.4.1-sources.jar!/com/twitter/summingbird/store/ClientStore.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="6" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="1905">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleJob.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/ExampleJob.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="22" selection-start="734" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="675">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,7 +139,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1920" />
+    <option name="width" value="1280" />
     <option name="height" value="713" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -153,8 +168,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -513,6 +526,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -555,6 +570,14 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -566,27 +589,6 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -614,6 +616,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -650,6 +665,19 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -667,19 +695,6 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="0" />
@@ -758,7 +773,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="713" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="713" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -777,14 +792,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18603411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18608414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -800,17 +815,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3033049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -840,9 +855,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="7" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="2175">
-          <folding>
-            <element signature="e#27#75#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,9 +886,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="114" selection-start="2854" selection-end="2984" vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="2205">
-          <folding>
-            <element signature="e#595#639#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -909,9 +920,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="7" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0" vertical-offset="1225" max-vertical-offset="2175">
-          <folding>
-            <element signature="e#27#75#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,9 +951,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="114" selection-start="2854" selection-end="2984" vertical-scroll-proportion="0.0" vertical-offset="1215" max-vertical-offset="2205">
-          <folding>
-            <element signature="e#595#639#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,9 +1047,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/Serialization.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="34" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.47115386" vertical-offset="111" max-vertical-offset="735">
-          <folding />
-        </state>
+        <state line="42" column="34" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.47115386" vertical-offset="111" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/DummyClickstream.scala">
@@ -1057,21 +1062,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/util-core_2.10/srcs/util-core_2.10-6.12.1-sources.jar!/com/twitter/util/Awaitable.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="6" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/summingbird-client_2.10/srcs/summingbird-client_2.10-0.4.1-sources.jar!/com/twitter/summingbird/store/ClientStore.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="6" selection-start="1061" selection-end="1061" vertical-scroll-proportion="-0.626327" vertical-offset="520" max-vertical-offset="1905" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/ExampleJob.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="6" selection-start="1012" selection-end="1021" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="705">
-          <folding />
-        </state>
+        <state line="68" column="6" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1965" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/package.scala">
@@ -1083,66 +1074,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/summingbird/tmp/summingbird-proto/store/1398244200000.version">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summingbird/tmp/summingbird-proto/store/1398244500000/part-00001">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="557">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="557" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/summingbird-batch_2.10/srcs/summingbird-batch_2.10-0.4.1-sources.jar!/com/twitter/summingbird/batch/Batcher.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="6" selection-start="6230" selection-end="6230" vertical-scroll-proportion="1.5924596" vertical-offset="1513" max-vertical-offset="3015">
-          <folding />
-        </state>
+        <state line="180" column="6" selection-start="6230" selection-end="6230" vertical-scroll-proportion="1.5924596" vertical-offset="1513" max-vertical-offset="3015" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summingbird/tmp/summingbird-proto/store/1398244500000/part-00000">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="557">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="557" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/storehaus-core_2.10/srcs/storehaus-core_2.10-0.9.0-sources.jar!/com/twitter/storehaus/ReadableStore.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="6" selection-start="6994" selection-end="6994" vertical-scroll-proportion="0.27586207" vertical-offset="1970" max-vertical-offset="2550">
-          <folding />
-        </state>
+        <state line="157" column="6" selection-start="6994" selection-end="6994" vertical-scroll-proportion="0.27586207" vertical-offset="1970" max-vertical-offset="2550" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summingbird/tmp/summingbird-proto/store/1398244500000/._SUCCESS.crc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summingbird/tmp/summingbird-proto/store/1398244500000/.part-00000.crc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/summingbird-core_2.10/srcs/summingbird-core_2.10-0.4.1-sources.jar!/com/twitter/summingbird/Producer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="6" selection-start="5947" selection-end="5947" vertical-scroll-proportion="-0.36206895" vertical-offset="2325" max-vertical-offset="4515">
-          <folding />
-        </state>
+        <state line="155" column="6" selection-start="5947" selection-end="5947" vertical-scroll-proportion="-0.36206895" vertical-offset="2325" max-vertical-offset="4515" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/StormRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="10" selection-start="5377" selection-end="5480" vertical-scroll-proportion="-22.038462" vertical-offset="1557" max-vertical-offset="2430">
-          <folding>
-            <element signature="e#595#639#0" expanded="true" />
-          </folding>
+        <state line="156" column="10" selection-start="5377" selection-end="5480" vertical-scroll-proportion="0.0" vertical-offset="2340" max-vertical-offset="2640">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,12 +1126,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/ExampleJob.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="22" selection-start="734" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.twitter/summingbird-client_2.10/srcs/summingbird-client_2.10-0.4.1-sources.jar!/com/twitter/summingbird/store/ClientStore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="6" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="33" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.5041322" vertical-offset="597" max-vertical-offset="2460">
-          <folding>
-            <element signature="e#27#75#0" expanded="true" />
-          </folding>
+        <state line="31" column="5" selection-start="968" selection-end="968" vertical-scroll-proportion="-3.2914286" vertical-offset="1557" max-vertical-offset="2505">
+          <folding />
         </state>
       </provider>
     </entry>

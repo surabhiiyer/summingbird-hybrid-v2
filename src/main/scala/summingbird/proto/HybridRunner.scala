@@ -29,7 +29,7 @@ object HybridRunner {
   val store = ClientStore(
     //ScaldingRunner.servingStore,
     StormRunner.viewCountStore,
-    5
+    1
   )
 
 //  def lookup(lookId: Long): Option[Long] =
@@ -50,7 +50,14 @@ object HybridRunner {
 
   def lookup(pdpView:ProductViewed): Option[Long] =
     Await.result {
-      store.get(pdpView.userGuid)
+
+      //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(pdpView.userGuid.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
+
+      for(v: Option[Long] <- store.get(pdpView.userGuid))
+      {
+       logger.info("#### OptionLong ###",v);
+      }
+      //store.get(pdpView.userGuid)
     }
 
 
@@ -146,7 +153,7 @@ object RunHybrid extends App {
       //logger.info("Events Counted (online): " + a)
      // val userGuid = ProductViewed.userGuid;
      // logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(userGuid.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum);
-        logger.info("Events Counted (online): " + HybridRunner.lookup(pdpView));
+       logger.info("Events Counted (online): " + HybridRunner.lookup(pdpView));
       //logger.info("Events Counted (hybrid): " + HybridRunner.store.multiGet(ids.toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
       }
       catch {
