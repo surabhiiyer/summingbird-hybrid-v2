@@ -52,10 +52,11 @@ object HybridRunner {
     Await.result {
 
       //logger.info("Events Counted (online): " + StormRunner.viewCountStore.multiGet(pdpView.userGuid.map(_ -> batcher.currentBatch).toSet).map(kv => Await.result(kv._2).getOrElse(0L)).sum)
-
+      var i = 0;
       for(v: Option[Long] <- store.get(pdpView.userGuid))
       {
-       logger.info("#### OptionLong ###",v);
+        i = i + 1;
+       logger.info("#### OptionLong ###", i);
       }
       //store.get(pdpView.userGuid)
     }

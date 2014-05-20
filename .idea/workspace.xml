@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9e2a8a2-9082-4017-8361-a817e3bf579a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" afterPath="$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="summingbird-proto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +87,7 @@
       <file leaf-file-name="HybridRunner.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="5" selection-start="968" selection-end="968" vertical-scroll-proportion="-3.2914286" vertical-offset="1557" max-vertical-offset="2505">
+            <state line="57" column="18" selection-start="1662" selection-end="1662" vertical-scroll-proportion="-3.9285715" vertical-offset="2170" max-vertical-offset="2520">
               <folding />
             </state>
           </provider>
@@ -773,7 +772,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="713" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="713" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1142,7 +1141,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/summingbird/proto/HybridRunner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="968" selection-end="968" vertical-scroll-proportion="-3.2914286" vertical-offset="1557" max-vertical-offset="2505">
+        <state line="57" column="18" selection-start="1662" selection-end="1662" vertical-scroll-proportion="-3.9285715" vertical-offset="2170" max-vertical-offset="2520">
           <folding />
         </state>
       </provider>
